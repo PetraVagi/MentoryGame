@@ -2,7 +2,7 @@
     cursor: pointer;
     border: 1px solid black;
     display: inline-block;
-    width: 100px;
+    width: 130px;
     height: 160px;
     font-size: 35px;
     text-align: center;
@@ -16,11 +16,17 @@
     cursor: pointer;
     border: 1px solid black;
     display: inline-block;
-    width: 50px;
+    width: 65px;
     height: 80px;
     font-size: 35px;
     text-align: center;
     margin: 3px;
     color: grey;
     vertical-align: middle;
+}
+
+
+img {
+    width: 65px;
+    height: 80px;
 }
