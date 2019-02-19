@@ -16,8 +16,6 @@
     cursor: pointer;
     border: 1px solid black;
     display: inline-block;
-    width: 65px;
-    height: 80px;
     font-size: 35px;
     text-align: center;
     margin: 3px;
@@ -39,10 +37,3 @@ body{
     max-width: 25%;
 }
 
-
-
-
-img {
-    width: 65px;
-    height: 80px;
-}
