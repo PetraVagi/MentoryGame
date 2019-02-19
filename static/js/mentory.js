@@ -9,9 +9,9 @@ function getAllImages() {
     let imgs = [];
     for (i; i <= 12; i++) {
         if (i < 10) {
-            let id = "0".concat(i);
+            let id = "game-field0".concat(i);
         } else {
-            let id = i;
+            let id = "game-field".concat(i);
         }
         img = document.getElementById(id);
         id.push(imgs);
