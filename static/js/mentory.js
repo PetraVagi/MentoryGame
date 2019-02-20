@@ -12,7 +12,6 @@ function dragAndDrop() {
         containers.push(gameImage);
     }
 
-
     dragula(containers, {
         copy: true
     });
@@ -162,6 +161,7 @@ function newFooter() {
         document.getElementById(divId).appendChild(img)
     }
 }
+
 
 function main() {
     dragAndDrop();
