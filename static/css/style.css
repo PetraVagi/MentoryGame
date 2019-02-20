@@ -1,3 +1,11 @@
+body {
+    background-color: #525151;
+    background-image: url("/static/images/large_logo_transparent.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
 .game-library {
     cursor: pointer;
     border: 1px solid black;
@@ -22,17 +30,37 @@
     vertical-align: middle;
 }
 
-.footer-library img{
-    width: 35px;
-    height: 65x;
+.footer-library {
+    alignment: center;
 }
 
-body{
-    background-color: #525151;
-    background-image: url("/static/images/large_logo_transparent.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25%;
+
+/*These are the pictures in the card box at the bottom of page*/
+.footer-library img {
+    width: 100px;
+    height: 131px;
+    border: solid;
+    border-width: 1px;
+    border-color: #464646;
+    box-shadow: 5px 10px 10px 2px #1f1f1f;
+    border-radius: 10px;
+
+}
+
+/*This is the whole footer (background)*/
+#footer {
+    background-color: #393939;
+    border-top: solid;
+    border-width: 10px;
+    border-color: #464646;
+    height: auto;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
 }
 
 .game-library img {
