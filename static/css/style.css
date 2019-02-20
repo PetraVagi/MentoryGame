@@ -30,6 +30,12 @@ body {
     vertical-align: middle;
 }
 
+.footer-library {
+    alignment: center;
+}
+
+
+/*These are the pictures in the card box at the bottom of page*/
 .footer-library img {
     width: 100px;
     height: 131px;
@@ -38,13 +44,23 @@ body {
     border-color: #464646;
     box-shadow: 5px 10px 10px 2px #1f1f1f;
     border-radius: 10px;
+
 }
 
+/*This is the whole footer (background)*/
 #footer {
     background-color: #393939;
-    border: solid;
-    border-radius: 10px;
-    height: 300px;
+    border-top: solid;
+    border-width: 10px;
+    border-color: #464646;
+    height: auto;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
 }
 
 .game-library img {
