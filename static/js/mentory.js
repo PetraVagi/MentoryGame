@@ -22,17 +22,17 @@ function nextCardToShow() {
 
     let img = document.createElement("img");
 
-    let images = ["images/img_01.jpg", "images/img_02.jpg",
-                  "images/img_03.jpg", "images/img_04.jpg",
-                  "images/img_05.jpg", "images/img_06.jpg",
-                  "images/img_07.jpg", "images/img_08.jpg",
-                  "images/img_09.jpg", "images/img_10.jpg",
-                  "images/img_11.jpg", "images/img_12.jpg"];
+    let images = ["static/images/img_01.jpg", "static/images/img_02.jpg",
+                  "static/images/img_03.jpg", "static/images/img_04.jpg",
+                  "static/images/img_05.jpg", "static/images/img_06.jpg",
+                  "static/images/img_07.jpg", "static/images/img_08.jpg",
+                  "static/images/img_09.jpg", "static/images/img_10.jpg",
+                  "static/images/img_11.jpg", "static/images/img_12.jpg"];
 
     img.src = getImageByRandomNumber(images);
     img.id = generateId(img, images);
 
-    let div = document.getElementById("game-field");
+    let div = document.getElementById("game-field01");
 
 
 
