@@ -46,7 +46,7 @@ function nextCardToShow() {
 
 function getImageByRandomNumber(images) {
 
-let randomImg = Math.floor((Math.random() * 12) + 1);
+let randomImg = Math.floor(Math.random() * 11);
 for (let i = 0; i <= images.length-1; i++) {
 
         if (randomImg == i) {
