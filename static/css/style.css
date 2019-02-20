@@ -14,7 +14,6 @@
 
 .footer-library {
     cursor: pointer;
-    border: 1px solid black;
     display: inline-block;
     font-size: 35px;
     text-align: center;
@@ -23,17 +22,15 @@
     vertical-align: middle;
 }
 
+.footer-library img{
+    width: 35px;
+    height: 65x;
+}
+
 body{
     background-color: #525151;
+    background-image: url("/static/images/large_logo_transparent.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
 }
-
-#background-img{
-    display: block;
-    margin-bottom: auto;
-    margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 25%;
-    max-width: 25%;
-}
-
