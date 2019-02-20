@@ -21,7 +21,7 @@
 <div id="footer">
     {% for id in range(1, 13) %}
         <div id="footer-field{{ id if id >= 10 else ('0' + id|string) }}" class="footer-library">
-            <div><img src="static/images/img_{{ id if id >= 10 else ('0' + id|string)}}.jpg" alt="mentor image"></div>
+            <img id="img-{{ id if id >= 10 else ('0' + id|string) }}" src="static/images/img_{{ id if id >= 10 else ('0' + id|string)}}.jpg">
         </div>
     {% endfor %}
 </div>
