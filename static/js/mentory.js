@@ -19,11 +19,16 @@ function dragAndDrop() {
 }
 
 function getSolution() {
-    var solution = ["#img-01", "#img-03"];
+    let solution = ["#img-01"];
     return solution;
 }
 
 function checkSolution() {
+    let gameField = document.getElementById('game-field01');
+    gameField.addEventListener("drop", checkSolutionInner);
+}
+
+function checkSolutionInner(event) {
     let imageIdsOnGameField = getAllImageIdsFromGameField(20);
     let solution = getSolution();
     for (index = 0; index < solution.length; index++) {
