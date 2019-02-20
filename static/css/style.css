@@ -4,18 +4,29 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 25%;
+    text-align: center;
 }
+
+.game-library img {
+    border-radius: 8px;
+    width: 176px;
+    height: 236px;
+
+}
+
+/*These are the slots on the game board*/
 
 .game-library {
     cursor: pointer;
-    border: 1px solid black;
+    border: 2px solid #464646;
+    border-radius: 10px;
     display: inline-block;
-    width: 130px;
-    height: 160px;
+    width: 180px;
+    height: 240px;
     font-size: 35px;
-    text-align: center;
-    margin: 3px;
-    color: grey;
+    margin: 15px;
+    background-color: rgba(137, 137, 137, 0.2);
+    box-shadow: 5px 10px 10px 2px rgba(0,0,0,0.2);
     vertical-align: middle;
 }
 
@@ -30,9 +41,6 @@ body {
     vertical-align: middle;
 }
 
-.footer-library {
-    alignment: center;
-}
 
 
 /*These are the pictures in the card box at the bottom of page*/
@@ -60,10 +68,5 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-
 }
 
-.game-library img {
-    width: 130px;
-    height: 160px;
-}
