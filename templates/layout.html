@@ -9,6 +9,9 @@
 {% block content %}
 
 <div id="header">
+    <form action="{{ url_for('start_game') }}">
+        <button class="{{ 'start' if started is not defined else 'retry' }}" name="started" type="submit">{{ 'Start' if started is not defined else 'Retry' }}</button>
+    </form>
     <h1>Mentory Game</h1>
 </div>
 
