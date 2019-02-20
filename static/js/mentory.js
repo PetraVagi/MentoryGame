@@ -1,31 +1,36 @@
-var solution = ["img-01", "img-02"];
+function getSolution() {
+    var solution = ["#img-01", "#img-03"];
+    return solution;
+}
 
-function checkSolution(solution) {
-    let imageIdsOnGameField = getAllImageIdsFromGameField();
+function checkSolution() {
+    let imageIdsOnGameField = getAllImageIdsFromGameField(20);
+    let solution = getSolution();
     for (index = 0; index < solution.length; index++) {
         if (imageIdsOnGameField[index] != solution[index]) {
-            alert("Wrong solution");
+            alert("Wrong solution... Maybe next time :D");
             return
         }
     }
+    alert("Correct.... But let's see the next one.")
+    return
 }
 
-function getAllImageIdsFromGameField() {
+function getAllImageIdsFromGameField(count) {
     let imgIds = [];
-    for (i = 1; i < 12; i++) {
+    for (i = 1; i < count; i++) {
         if (i < 10) {
             var id = "#img-0".concat(i);
         } else {
             var id = "#img-".concat(i);
         }
-        try {
-            let img = document.querySelector(id);
-            imgIds.push(img);
-        } catch (error) {
-            alert("No such image!");
+        if (document.querySelector(id) != null) {
+            imgIds.push(id);
+        } else {
+            return imgIds;
         }
     }
     return imgIds;
 }
 
-checkSolution(solution);
+checkSolution();
