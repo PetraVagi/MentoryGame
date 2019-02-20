@@ -12,11 +12,11 @@ function dragAndDrop() {
         containers.push(gameImage);
     }
 
-
     dragula(containers, {
         copy: true
     });
 }
+
 
 
 function main() {
