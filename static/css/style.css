@@ -1,0 +1,41 @@
+.game-library {
+    cursor: pointer;
+    border: 1px solid black;
+    display: inline-block;
+    width: 130px;
+    height: 160px;
+    font-size: 35px;
+    text-align: center;
+    margin: 3px;
+    color: grey;
+    vertical-align: middle;
+}
+
+
+.footer-library {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 35px;
+    text-align: center;
+    margin: 3px;
+    color: grey;
+    vertical-align: middle;
+}
+
+.footer-library img{
+    width: 35px;
+    height: 65x;
+}
+
+body{
+    background-color: #525151;
+    background-image: url("/static/images/large_logo_transparent.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+.game-library img {
+    width: 130px;
+    height: 160px;
+}

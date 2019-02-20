@@ -1,11 +1,29 @@
 {% extends 'base.html' %}
 
+{% block head %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js" defer></script>
+    <script src="{{ url_for('static', filename='js/mentory.js') }}" defer></script>
+{% endblock %}
+
 {% block content %}
+
 <div id="header">
     <h1>Mentory Game</h1>
 </div>
+
 <div id="game-field">
+    {% for id in range(1, 13) %}
+        <div id="game-field{{ id if id >= 10 else ('0' + id|string) }}" class="game-library"></div>
+    {% endfor %}
 </div>
+
 <div id="footer">
+    {% for id in range(1, 13) %}
+        <div id="footer-field{{ id if id >= 10 else ('0' + id|string) }}" class="footer-library">
+            <img id="img-{{ id if id >= 10 else ('0' + id|string) }}" src="static/images/img_{{ id if id >= 10 else ('0' + id|string)}}.jpg">
+        </div>
+    {% endfor %}
 </div>
+
 {% endblock %}
