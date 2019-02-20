@@ -1,3 +1,17 @@
+#start_button {
+    float: left;
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid darkgreen;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    background-color: green;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
 body {
     background-color: #525151;
     background-image: url("/static/images/large_logo_transparent.png");
@@ -6,6 +20,8 @@ body {
     background-size: 25%;
     text-align: center;
 }
+
+/*These are the images in the slots*/
 
 .game-library img {
     border-radius: 8px;
