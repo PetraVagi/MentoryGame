@@ -1,3 +1,11 @@
+body {
+    background-color: #525151;
+    background-image: url("/static/images/large_logo_transparent.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
 .game-library {
     cursor: pointer;
     border: 1px solid black;
@@ -22,15 +30,19 @@
     vertical-align: middle;
 }
 
-.footer-library img{
-    width: 35px;
-    height: 65x;
+.footer-library img {
+    width: 100px;
+    height: 131px;
+    border: solid;
+    border-width: 1px;
+    border-color: #464646;
+    box-shadow: 5px 10px 10px 2px #1f1f1f;
+    border-radius: 10px;
 }
 
-body{
-    background-color: #525151;
-    background-image: url("/static/images/large_logo_transparent.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25%;
+#footer {
+    background-color: #393939;
+    border: solid;
+    border-radius: 10px;
+    height: 300px;
 }
