@@ -9,10 +9,8 @@
 {% block content %}
 
 <div id="header">
-    <form action="{{ url_for('index') }}">
-        <button id="start-button" type="submit">Start</button>
-        <button id="retry-button" type="submit">Retry</button>
-    </form>
+    <button id="retry-button">Retry</button>
+    <button id="start-button" type="button">Start</button>
     <button id="next-level" type="button">Next Level</button>
     <button id="check-solution" type="button">Check Solution</button>
     <h1>Mentory Game</h1>

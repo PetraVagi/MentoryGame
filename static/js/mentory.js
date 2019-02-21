@@ -74,9 +74,24 @@ function generateId(img, images) {
     return id
 }
 
+function clearSlots() {
+
+    let nextLevelButton = document.getElementById('next-level');
+    let gameSlots = document.getElementsByClassName('game-library');
+
+    nextLevelButton.addEventListener('click', function () {
+        for (let slot of gameSlots) {
+            while (slot.hasChildNodes()) {
+                slot.removeChild(slot.firstChild);
+            }
+        }
+    });
+}
+
 function main() {
     dragAndDrop();
     nextCardToShow();
+    clearSlots();
 }
 
 
