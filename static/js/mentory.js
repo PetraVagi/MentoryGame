@@ -19,22 +19,26 @@ function dragAndDrop() {
 
 
 function countScore() {
-    let startButton = document.getElementById('start');
-    startButton.addEventListener('click', function () {
-        startButton.classList.toggle('clicked')
-    })
+    const test = document.createElement('button');
+    test.classList.add('Not_clicked');
+    test.textContent = 'TestStart';
+    document.querySelector('#header').appendChild(test);
+    test.addEventListener('click', TEST);
+
+
 }
 
+function TEST() {
+    var startScore = 1000;
 
-var startScore = 1000;
-var score = document.getElementById('score');
+    function Score() {
+        document.getElementById('score').innerHTML = "Score: " + startScore;
+        startScore -= 1;
+    }
 
-function Score() {
-    startScore -= 1;
-    score.innerHTML = "Score: " + startScore;
+    let interval = window.setInterval(Score, 1000);
+    return interval
 }
-
-var interval = window.setInterval(Score, 1000);
 
 
 function main() {
