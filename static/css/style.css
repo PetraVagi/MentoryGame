@@ -1,4 +1,18 @@
-#start_button {
+/*Title settings*/
+
+h1 {
+    padding: 10px 30px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px #a7aba9, inset -1px -10px 5px #2a2a29, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px #a7aba9, inset -1px -10px 5px #2a2a29, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px #a7aba9, inset -1px -10px 5px #2a2a29, 1px 2px 1px black;
+    background-color: #2a2a29;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 30px
+}
+
+#start-button {
     float: left;
     margin: 10px;
     padding: 5px 30px;
@@ -12,6 +26,24 @@
     color: white;
     text-shadow: 1px 1px 1px black;
 }
+
+#start-button {
+    float: left;
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid darkgreen;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px lightgreen, inset -1px -10px 5px darkgreen, 1px 2px 1px black;
+    background-color: green;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+/*Body and Background settings*/
+
 body {
     background-color: #525151;
     background-image: url("/static/images/large_logo_transparent.png");
@@ -46,6 +78,45 @@ body {
     vertical-align: middle;
 }
 
+/*Picture's FX during drag & drop*/
+
+.gu-mirror {
+    animation: shake 0.75s;
+    animation-iteration-count: infinite;
+    border: solid;
+    border-width: 2px;
+    border-color: rgba(156, 164, 163, 0.8);
+    box-shadow: 0px 0px 20px 10px rgba(156, 164, 163, 0.8);
+    border-radius: 10px;
+}
+
+/*---------------------------------------------------------FOOTER PICS------------------------------------------------*/
+
+/*FOOTER PICS*/
+.footer-library img {
+    width: 100px;
+    height: 131px;
+    border: solid;
+    border-width: 2px;
+    border-color: #464646;
+    box-shadow: 5px 10px 10px 2px #1f1f1f;
+    border-radius: 10px;
+}
+
+/*FOOTER PICS Mouse over FX*/
+
+.footer-library img:hover {
+    width: 150px;
+    height: 197px;
+    border: solid;
+    border-width: 2px;
+    border-color: rgba(156, 164, 163, 0.8);
+    box-shadow: 0px 0px 10px 5px rgba(156, 164, 163, 0.8);
+    border-radius: 10px;
+}
+
+
+/*------------------------------------------------------FOOTER--------------------------------------------------------*/
 
 .footer-library {
     cursor: pointer;
@@ -57,19 +128,6 @@ body {
     vertical-align: middle;
 }
 
-
-
-/*These are the pictures in the card box at the bottom of page*/
-.footer-library img {
-    width: 100px;
-    height: 131px;
-    border: solid;
-    border-width: 1px;
-    border-color: #464646;
-    box-shadow: 5px 10px 10px 2px #1f1f1f;
-    border-radius: 10px;
-
-}
 
 /*This is the whole footer (background)*/
 #footer {
@@ -86,3 +144,56 @@ body {
     text-align: center;
 }
 
+
+/* Footer Mouse over FX*/
+#footer:hover {
+    background-color: #393939;
+    border-top: solid;
+    border-width: 10px;
+    border-color: #464646;
+    height: 240px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 210px;
+}
+/*---------------------------------------------SPECIAL FX------------------------------------------------------------*/
+@keyframes shake {
+    0% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-2px, -3px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-4px, 1px) rotate(1deg);
+    }
+    30% {
+        transform: translate(4px, 3px) rotate(0deg);
+    }
+    40% {
+        transform: translate(2px, -2px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-2px, 3px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-4px, 2px) rotate(0deg);
+    }
+    70% {
+        transform: translate(4px, 2px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-2px, -2px) rotate(1deg);
+    }
+    90% {
+        transform: translate(2px, 3px) rotate(0deg);
+    }
+    100% {
+        transform: translate(2px, -3px) rotate(-1deg);
+    }
+}
