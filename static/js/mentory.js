@@ -22,11 +22,11 @@ function nextCardToShow() {
     let img = document.createElement("img");
 
     let images = ["static/images/img_01.jpg", "static/images/img_02.jpg",
-                  "static/images/img_03.jpg", "static/images/img_04.jpg",
-                  "static/images/img_05.jpg", "static/images/img_06.jpg",
-                  "static/images/img_07.jpg", "static/images/img_08.jpg",
-                  "static/images/img_09.jpg", "static/images/img_10.jpg",
-                  "static/images/img_11.jpg", "static/images/img_12.jpg"];
+        "static/images/img_03.jpg", "static/images/img_04.jpg",
+        "static/images/img_05.jpg", "static/images/img_06.jpg",
+        "static/images/img_07.jpg", "static/images/img_08.jpg",
+        "static/images/img_09.jpg", "static/images/img_10.jpg",
+        "static/images/img_11.jpg", "static/images/img_12.jpg"];
 
     img.src = getImageByRandomNumber(images);
     img.id = generateId(img, images);
@@ -34,19 +34,17 @@ function nextCardToShow() {
     let div = document.getElementById("game-field01");
 
 
-
-
     div.appendChild(img);
 
-    setTimeout(function(){
-    img.parentNode.removeChild(img);
+    setTimeout(function () {
+        img.parentNode.removeChild(img);
     }, 2000);
 }
 
 function getImageByRandomNumber(images) {
 
-let randomImg = Math.floor(Math.random() * 11);
-for (let i = 0; i <= images.length-1; i++) {
+    let randomImg = Math.floor(Math.random() * 11);
+    for (let i = 0; i <= images.length - 1; i++) {
 
         if (randomImg == i) {
             return images[i]
@@ -58,15 +56,14 @@ function generateId(img, images) {
 
 
     let id;
-    for (let i = 0; i <= images.length-1; i++) {
+    for (let i = 0; i <= images.length - 1; i++) {
 
-        if(images[i] == img.getAttribute("src")) {
-            if(i < 9) {
-                let number = i+1;
+        if (images[i] == img.getAttribute("src")) {
+            if (i < 9) {
+                let number = i + 1;
                 id = "img-0" + number.toString();
-            }
-            else {
-                let number = i+1;
+            } else {
+                let number = i + 1;
                 id = "img-" + number.toString();
             }
         }
@@ -100,23 +97,34 @@ function retryLevel() {
 
 function startCountScore() {
     let start_button = document.getElementById('start-button');
-    start_button.addEventListener('click', countScore);
+    start_button.addEventListener('click', function () {
+        countScore(0)
+    });
 }
 
 
-function countScore() {
-    let startScore = 1000;
+function countScore(score) {
+    let currentScore = 500;
 
     function Score() {
-        document.getElementById('score').innerHTML = "Score: " + startScore;
-        startScore -= 1;
+        document.getElementById('current_score').innerHTML = "Current score: " + currentScore;
+        currentScore -= 2;
     }
 
-    let interval = window.setInterval(Score, 1000);
+    let interval = window.setInterval(Score, 200);
 
     let stop_button = document.getElementById('check-solution');
     stop_button.addEventListener('click', function () {
         clearInterval(interval)
+    });
+
+    let next_button = document.getElementById('next-level');
+    next_button.addEventListener('click', function () {
+        score += currentScore;
+        document.getElementById('score').innerHTML = "Score: " + score;
+    });
+    next_button.addEventListener('click', function () {
+        countScore(score)
     });
 
     return interval
