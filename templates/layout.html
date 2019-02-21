@@ -9,8 +9,9 @@
 {% block content %}
 
 <div id="header">
-    <form action="{{ url_for('start_game') }}">
-        <button class="start" name="started" type="submit" id="start">{{ 'Start' if started is not defined else 'Retry' }}</button>
+    <form action="{{ url_for('index') }}">
+        <button id="start-button" type="submit">Start</button>
+        <button id="retry-button" type="submit">Retry</button>
     </form>
     <h1>Mentory Game</h1>
     <p id="score"></p>
