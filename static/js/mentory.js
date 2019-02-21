@@ -18,7 +18,6 @@ function dragAndDrop() {
 }
 
 
-
 function main() {
     dragAndDrop();
 }
