@@ -132,10 +132,12 @@ function main() {
     let taskOrder = [];
     retryLevel();
     dragAndDrop();
+    // Sooo cleaaan!
     let start = document.getElementById("start-button");
     start.addEventListener("click", function(event) {
         nextCardToShow(taskOrder);
     });
+    // END Sooo cleaaan!
     checkSolution();
     clearSlots(taskOrder);
 }
