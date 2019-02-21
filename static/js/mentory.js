@@ -85,19 +85,22 @@ function checkSolution() {
         let solutionIds = solutionIdsRaw.split(",");
         for (element of solutionIds) {
 
+            if (count > 11) {
+                alert("ABSOLÚT WINNER VAGY!");
+                return;
+            }
+
             let gameLibrary = document.querySelectorAll(".game-library");
             let divId = gameLibrary[count].id;
             let image = document.getElementById(divId).children[0];
             let imageId = image.id;
 
-            if (imageId == element) {
-                let message = imageId.concat(imageId);
-                alert(message);
-            } else {
-                alert("Not good");
+            if (imageId != element) {
+                alert("Your LOSEEERR!!444!!!");
             }
             count++;
         }
+        alert("SOOO GOOOD!!!");
     })
 }
 
