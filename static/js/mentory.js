@@ -77,7 +77,31 @@ function generateId(img, images) {
     return id
 }
 
-function clearSlots() {
+function checkSolution() {
+    let checkButton = document.getElementById('check-solution');
+    checkButton.addEventListener("click", function(event) {
+        let count = 0;
+        let solutionIdsRaw = sessionStorage.getItem("task");
+        let solutionIds = solutionIdsRaw.split(",");
+        for (element of solutionIds) {
+
+            let gameLibrary = document.querySelectorAll(".game-library");
+            let divId = gameLibrary[count].id;
+            let image = document.getElementById(divId).children[0];
+            let imageId = image.id;
+
+            if (imageId == element) {
+                let message = imageId.concat(imageId);
+                alert(message);
+            } else {
+                alert("Not good");
+            }
+            count++;
+        }
+    })
+}
+
+function clearSlots(taskOrder) {
 
     let nextLevelButton = document.getElementById('next-level');
     let gameSlots = document.getElementsByClassName('game-library');
@@ -88,6 +112,7 @@ function clearSlots() {
                 slot.removeChild(slot.firstChild);
             }
         }
+        nextCardToShow(taskOrder);
     });
 }
 
@@ -104,18 +129,12 @@ function main() {
     let taskOrder = [];
     retryLevel();
     dragAndDrop();
-    let start = document.getEelementById("start-button");
-    start.addEventListener("click", function() {
+    let start = document.getElementById("start-button");
+    start.addEventListener("click", function(event) {
         nextCardToShow(taskOrder);
     });
-    nextCardToShow(taskOrder);
-    let nextLevel = document.getElementById("next-level");
-    nextLevel.addEventListener("click", function() {
-
-        nextCardToShow(taskOrder);
-    });
-    nextCardToShow();
-    clearSlots();
+    checkSolution();
+    clearSlots(taskOrder);
 }
 
 
