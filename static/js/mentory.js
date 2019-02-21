@@ -77,8 +77,32 @@ function generateId(img, images) {
     return id
 }
 
+function clearSlots() {
+
+    let nextLevelButton = document.getElementById('next-level');
+    let gameSlots = document.getElementsByClassName('game-library');
+
+    nextLevelButton.addEventListener('click', function () {
+        for (let slot of gameSlots) {
+            while (slot.hasChildNodes()) {
+                slot.removeChild(slot.firstChild);
+            }
+        }
+    });
+}
+
+function retryLevel() {
+
+    let retryButton = document.getElementById('retry-button');
+
+    retryButton.addEventListener('click', function () {
+        window.location.href = '/';
+    });
+}
+
 function main() {
     let taskOrder = [];
+    retryLevel();
     dragAndDrop();
     let start = document.getEelementById("start-button");
     start.addEventListener("click", function() {
@@ -90,6 +114,8 @@ function main() {
 
         nextCardToShow(taskOrder);
     });
+    nextCardToShow();
+    clearSlots();
 }
 
 
