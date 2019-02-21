@@ -88,7 +88,17 @@ function clearSlots() {
     });
 }
 
+function retryLevel() {
+
+    let retryButton = document.getElementById('retry-button');
+
+    retryButton.addEventListener('click', function () {
+        window.location.href = '/';
+    });
+}
+
 function main() {
+    retryLevel();
     dragAndDrop();
     nextCardToShow();
     clearSlots();
