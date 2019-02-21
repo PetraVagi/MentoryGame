@@ -99,13 +99,13 @@ function retryLevel() {
 
 
 function startCountScore() {
-    const test = document.getElementById('start-button');
-    test.addEventListener('click', countScore);
+    let start_button = document.getElementById('start-button');
+    start_button.addEventListener('click', countScore);
 }
 
 
 function countScore() {
-    var startScore = 1000;
+    let startScore = 1000;
 
     function Score() {
         document.getElementById('score').innerHTML = "Score: " + startScore;
@@ -113,6 +113,12 @@ function countScore() {
     }
 
     let interval = window.setInterval(Score, 1000);
+
+    let stop_button = document.getElementById('check-solution');
+    stop_button.addEventListener('click', function () {
+        clearInterval(interval)
+    });
+
     return interval
 }
 
@@ -122,7 +128,7 @@ function main() {
     dragAndDrop();
     nextCardToShow();
     clearSlots();
-    startCountScore()
+    startCountScore();
 }
 
 
