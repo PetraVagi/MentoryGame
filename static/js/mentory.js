@@ -38,6 +38,8 @@ function nextCardToShow() {
 
     div.appendChild(img);
 
+    sessionStorage.setItem('imageId', img.id);
+
     setTimeout(function(){
     img.parentNode.removeChild(img);
     }, 2000);
@@ -63,11 +65,11 @@ function generateId(img, images) {
         if(images[i] == img.getAttribute("src")) {
             if(i < 9) {
                 let number = i+1;
-                id = "game-field-img-0" + number.toString();
+                id = "img-0" + number.toString();
             }
             else {
                 let number = i+1;
-                id = "game-field-img-" + number.toString();
+                id = "img-" + number.toString();
             }
         }
     }
@@ -75,12 +77,12 @@ function generateId(img, images) {
 }
 
 function checkSolution() {
+    let newSolutionElementId = sessionStorage.getItem('imageId');
+    var solution = [newSolutionElementId];
 
-    var solution = [];
-
-    let startButton = document.getElementById('start-game');
+    let startButton = document.getElementById('start_button');
     startButton.addEventListener("click", function(event) {
-        let newSolutionElementId = document.querySelector("#game-field-img-01")
+        let newSolutionElementId = sessionStorage.getItem('imageId');
         solution.push(newSolutionElementId);
     });
 
@@ -89,7 +91,8 @@ function checkSolution() {
         clearGameField();
         newFooter();
         nextCardToShow();
-        let newSolutionElementId = document.querySelector("#game-field-img-01")
+
+        let newSolutionElementId = sessionStorage.getItem('imageId');
         solution.push(newSolutionElementId);
     });
 
@@ -98,10 +101,9 @@ function checkSolution() {
 
         let imageIdsOnGameField = getAllImageIdsFromGameField(20);
 
-        for (index = 0; index < solution.length; index++) {
+        for (index = 0; index < solution.length - 1; index++) {
             if (imageIdsOnGameField[index] != solution[index]) {
                 alert("Wrong solution... Maybe next time :D");
-                main();
             }
         }
         alert("Correct.... But let's see the next one.")
