@@ -17,7 +17,7 @@ function dragAndDrop() {
     });
 }
 
-function nextCardToShow() {
+function nextCardToShow(taskOrder) {
 
     let img = document.createElement("img");
 
@@ -32,6 +32,9 @@ function nextCardToShow() {
     img.id = generateId(img, images);
 
     let div = document.getElementById("game-field01");
+    let id = img.getAttribute("id");
+    taskOrder.push(id);
+    sessionStorage.setItem("task", taskOrder);
 
 
 
@@ -75,8 +78,18 @@ function generateId(img, images) {
 }
 
 function main() {
+    let taskOrder = [];
     dragAndDrop();
-    nextCardToShow();
+    let start = document.getEelementById("start-button");
+    start.addEventListener("click", function() {
+        nextCardToShow(taskOrder);
+    });
+    nextCardToShow(taskOrder);
+    let nextLevel = document.getElementById("next-level");
+    nextLevel.addEventListener("click", function() {
+
+        nextCardToShow(taskOrder);
+    });
 }
 
 
