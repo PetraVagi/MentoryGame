@@ -17,6 +17,7 @@ function dragAndDrop() {
     });
 }
 
+
 function nextCardToShow(taskOrder) {
 
     let img = document.createElement("img");
@@ -36,9 +37,6 @@ function nextCardToShow(taskOrder) {
     taskOrder.push(id);
     sessionStorage.setItem("task", taskOrder);
 
-
-
-
     div.appendChild(img);
 
     setTimeout(function(){
@@ -46,10 +44,11 @@ function nextCardToShow(taskOrder) {
     }, 2000);
 }
 
+
 function getImageByRandomNumber(images) {
 
-let randomImg = Math.floor(Math.random() * 11);
-for (let i = 0; i <= images.length-1; i++) {
+    let randomImg = Math.floor(Math.random() * 11);
+    for (let i = 0; i <= images.length - 1; i++) {
 
         if (randomImg == i) {
             return images[i]
@@ -57,8 +56,8 @@ for (let i = 0; i <= images.length-1; i++) {
     }
 }
 
-function generateId(img, images) {
 
+function generateId(img, images) {
 
     let id;
     for (let i = 0; i <= images.length-1; i++) {
@@ -76,6 +75,7 @@ function generateId(img, images) {
     }
     return id
 }
+
 
 function checkSolution() {
     let checkButton = document.getElementById('check-solution');
@@ -104,6 +104,7 @@ function checkSolution() {
     })
 }
 
+
 function clearSlots(taskOrder) {
 
     let nextLevelButton = document.getElementById('next-level');
@@ -119,6 +120,7 @@ function clearSlots(taskOrder) {
     });
 }
 
+
 function retryLevel() {
 
     let retryButton = document.getElementById('retry-button');
@@ -127,6 +129,7 @@ function retryLevel() {
         window.location.href = '/';
     });
 }
+
 
 function startCountScore() {
     let start_button = document.getElementById('start-button');
