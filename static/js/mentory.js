@@ -38,8 +38,6 @@ function nextCardToShow() {
 
     div.appendChild(img);
 
-    sessionStorage.setItem('imageId', img.id);
-
     setTimeout(function(){
     img.parentNode.removeChild(img);
     }, 2000);
@@ -76,99 +74,9 @@ function generateId(img, images) {
     return id
 }
 
-function checkSolution() {
-    let newSolutionElementId = sessionStorage.getItem('imageId');
-    var solution = [newSolutionElementId];
-
-    let startButton = document.getElementById('start_button');
-    startButton.addEventListener("click", function(event) {
-        let newSolutionElementId = sessionStorage.getItem('imageId');
-        solution.push(newSolutionElementId);
-    });
-
-    let nextLevelButton = document.getElementById('next-level');
-    nextLevelButton.addEventListener("click", function(event) {
-        clearGameField();
-        newFooter();
-        nextCardToShow();
-
-        let newSolutionElementId = sessionStorage.getItem('imageId');
-        solution.push(newSolutionElementId);
-    });
-
-    let checkButton = document.getElementById('check-solution');
-    checkButton.addEventListener("click", function(event) {
-
-        let imageIdsOnGameField = getAllImageIdsFromGameField(20);
-
-        for (index = 0; index < solution.length - 1; index++) {
-            if (imageIdsOnGameField[index] != solution[index]) {
-                alert("Wrong solution... Maybe next time :D");
-            }
-        }
-        alert("Correct.... But let's see the next one.")
-    });
-}
-
-function getAllImageIdsFromGameField(count) {
-    let imgIds = [];
-    for (i = 1; i < count; i++) {
-        if (i < 10) {
-            var id = "#img-0".concat(i);
-        } else {
-            var id = "#img-".concat(i);
-        }
-        if (document.querySelector(id) != null) {
-            imgIds.push(id);
-        } else {
-            return imgIds;
-        }
-    }
-    return imgIds;
-}
-
-function clearGameField() {
-    for (i = 1; i < 13; i++) {
-        if (i < 10) {
-            var id = "img-0".concat(i);
-        } else {
-            var id = "img-".concat(i);
-        }
-        let img = document.getElementById(id);
-        img.parentNode.removeChild(img);
-    }
-}
-
-function newFooter() {
-    let images = ["static/images/img_01.jpg", "static/images/img_02.jpg",
-                  "static/images/img_03.jpg", "static/images/img_04.jpg",
-                  "static/images/img_05.jpg", "static/images/img_06.jpg",
-                  "static/images/img_07.jpg", "static/images/img_08.jpg",
-                  "static/images/img_09.jpg", "static/images/img_10.jpg",
-                  "static/images/img_11.jpg", "static/images/img_12.jpg"];
-    for (i = 1; i < 13; i++) {
-        if (i < 10) {
-            var id = "img-0".concat(i);
-        } else {
-            var id = "img-".concat(i);
-        }
-        let img = document.createElement("img");
-        img.src = images[i];
-        img.id = id;
-        if (i < 10) {
-            var divId = "footer-field0".concat(i);
-        } else {
-            var divId = "footer-field".concat(i);
-        }
-        document.getElementById(divId).appendChild(img)
-    }
-}
-
-
 function main() {
     dragAndDrop();
     nextCardToShow();
-    checkSolution();
 }
 
 
