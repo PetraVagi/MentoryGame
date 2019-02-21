@@ -97,17 +97,14 @@ function retryLevel() {
     });
 }
 
-function countScore() {
-    const test = document.createElement('button');
-    test.classList.add('Not_clicked');
-    test.textContent = 'TestStart';
-    document.querySelector('#header').appendChild(test);
-    test.addEventListener('click', TEST);
 
-
+function startCountScore() {
+    const test = document.getElementById('start-button');
+    test.addEventListener('click', countScore);
 }
 
-function TEST() {
+
+function countScore() {
     var startScore = 1000;
 
     function Score() {
@@ -125,7 +122,7 @@ function main() {
     dragAndDrop();
     nextCardToShow();
     clearSlots();
-    countScore()
+    startCountScore()
 }
 
 
