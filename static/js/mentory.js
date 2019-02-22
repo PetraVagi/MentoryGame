@@ -96,11 +96,11 @@ function checkSolution() {
             let imageId = image.id;
 
             if (imageId != element) {
-                alert("Your LOSEEERR!!444!!!");
+                alert("Wrong solution, press 'Retry'!");
             }
             count++;
         }
-        alert("SOOO GOOOD!!!");
+        alert("Good solution, press 'Next Level'!");
     })
 }
 
