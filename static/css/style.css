@@ -26,14 +26,14 @@ h1 {
 #current_score{
     color: white;
     text-shadow: 1px 1px 1px black;
-    font-size: 15px;
+    font-size: 25px;
     float: right;
 }
 
 #score {
     color: white;
     text-shadow: 1px 1px 1px black;
-    font-size: 15px;
+    font-size: 25px;
     float: left
 }
 
