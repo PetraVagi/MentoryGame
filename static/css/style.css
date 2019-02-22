@@ -9,6 +9,7 @@ body {
 
 /*-----------------------------------------------------------NAVIGATION BAR-------------------------------------------*/
 
+
 h1 {
     padding: 10px 30px;
     border-radius: 4px;
@@ -20,6 +21,20 @@ h1 {
     text-shadow: 1px 1px 1px black;
     font-size: 30px;
     font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+#current_score{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 15px;
+    float: right;
+}
+
+#score {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 15px;
+    float: left
 }
 
 #start-button {
@@ -47,6 +62,38 @@ h1 {
     -moz-box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
     box-shadow: inset 1px 6px 12px #687bee, inset -1px -10px 5px #1e0c64, 1px 2px 1px black;
     background-color: #1e0c64;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+#check-solution {
+    float: right;
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid #720005;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px #ee5057, inset -1px -10px 5px #8e0b08, 1px 2px 1px black;
+    background-color: #8e0b08;
+    font-size: large;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+#next-level {
+    float: right;
+    margin: 10px;
+    padding: 5px 30px;
+    border: 1px solid #1b5750;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px #2ea480, inset -1px -10px 5px #1c6f68, 1px 2px 1px black;
+    background-color: #1c6f68;
     font-size: large;
     color: white;
     text-shadow: 1px 1px 1px black;
